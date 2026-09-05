@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "removeComments": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@near-by/types": ["../../packages/types/src"],
+      "@near-by/types/*": ["../../packages/types/src/*"],
+      "@near-by/events": ["../../packages/events/src"],
+      "@near-by/events/*": ["../../packages/events/src/*"]
+    }
+  }
+}

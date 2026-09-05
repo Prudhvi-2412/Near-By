@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 15% 5%;
+    --foreground: 40 33% 94%;
+
+    --card: 260 14% 8%;
+    --card-foreground: 40 33% 94%;
+
+    --popover: 260 14% 7%;
+    --popover-foreground: 40 33% 94%;
+
+    --primary: 340 62% 33%;
+    --primary-foreground: 40 40% 97%;
+
+    --secondary: 260 10% 14%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 260 10% 13%;
+    --muted-foreground: 30 12% 65%;
+
+    --accent: 42 58% 51%;
+    --accent-foreground: 260 20% 8%;
+
+    --destructive: 0 68% 45%;
+    --destructive-foreground: 40 33% 96%;
+
+    --border: 260 10% 18%;
+    --input: 260 10% 18%;
+    --ring: 42 58% 51%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-image:
+      radial-gradient(80% 60% at 50% -10%, rgba(163, 36, 79, 0.18) 0%, rgba(10, 10, 11, 0) 60%),
+      linear-gradient(180deg, #0a0a0b 0%, #121013 100%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08];
+  }
+  .text-gradient-gold {
+    background: linear-gradient(90deg, #e6cc70, #c9a227 45%, #e6cc70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .grain-overlay {
+    @apply pointer-events-none absolute inset-0 bg-grain;
+  }
+}
