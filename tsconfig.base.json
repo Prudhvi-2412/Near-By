@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "sourceMap": true,
+    "incremental": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@near-by/types": ["packages/types/src"],
+      "@near-by/types/*": ["packages/types/src/*"],
+      "@near-by/events": ["packages/events/src"],
+      "@near-by/events/*": ["packages/events/src/*"],
+      "@near-by/ui": ["packages/ui/src"],
+      "@near-by/ui/*": ["packages/ui/src/*"]
+    }
+  }
+}

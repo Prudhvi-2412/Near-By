@@ -1,0 +1,50 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# build output
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# testing
+coverage/
+
+# prisma
+prisma/dev.db
+prisma/migrations/dev/
+
+# IDE / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# docker volumes captured accidentally
+infrastructure/docker/.data/
+
+# terraform
+infrastructure/aws/**/.terraform/
+infrastructure/aws/**/*.tfstate
+infrastructure/aws/**/*.tfstate.*
+infrastructure/aws/**/.terraform.lock.hcl
+
+# misc
+.turbo/
+*.pem
